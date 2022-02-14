@@ -1,3 +1,11 @@
+<?php
+
+$test = "Hello Word!";
+
+echo $test;
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +15,6 @@
     <title>PHP Badwords Fabrizio Fornone</title>
 </head>
 <body>
-    
+    <h1>test</h1>
 </body>
 </html>
