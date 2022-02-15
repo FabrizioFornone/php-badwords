@@ -1,6 +1,10 @@
 <?php
 
-$userword = $_GET['word'];
+if (key_exists('word', $_GET)) {
+    $userword = $_GET['word'];
+} else {
+    $userword = 'Choose a word to replace with a query: ?word=';
+}
 
 
 $paragraph = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam in mollitia sunt voluptatibus possimus non, molestiae expedita ducimus atque eius laborum! Perferendis sunt magni dolore quos nisi eius earum eaque!";
@@ -39,7 +43,7 @@ $newWord = str_replace($userword, '***', $paragraph);
             <div>
                 <h2> <span>Query Key:</span>
                     <?php
-                    echo $userword;
+                    echo $userword
                     ?>
                 </h2>
                 <h2> <span>Censored Paragraph:</span>
